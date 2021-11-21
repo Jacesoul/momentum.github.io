@@ -1,12 +1,9 @@
-const amIFat = null;
-let something;
-console.log(something);
+const age = 90;
 
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+function calculateKrAge(ageOfForeign) {
+  return ageOfForeign + 2;
+}
 
-// Get Item from Array
-console.log(daysOfWeek);
+const krAge = calculateKrAge(age);
 
-// Add one more day to the array
-daysOfWeek.push("sun");
-console.log(daysOfWeek);
+console.log(krAge);
