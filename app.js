@@ -1,9 +1,6 @@
-const age = 90;
+const title = document.getElementById("title");
 
-function calculateKrAge(ageOfForeign) {
-  return ageOfForeign + 2;
-}
+title.innerHTML = "!";
 
-const krAge = calculateKrAge(age);
-
-console.log(krAge);
+console.log(title.id);
+console.log(title.className);
