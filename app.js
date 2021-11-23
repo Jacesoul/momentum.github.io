@@ -1,21 +1,20 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
   event.preventDefault(); // 브라우저가 기본적으로 작동하는것을 막는다.
-  console.log(event);
-}
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  greeting.innerHTML = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 
-function handleLinkClick(event) {
-  event.preventDefault();
-  console.dir(event);
-  alert("clicked!");
+  console.log(username);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
 
 /*
 addEventListener가 handleLinkClick 함수를 실행할때 하는 일 
