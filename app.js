@@ -8,6 +8,7 @@ function onLoginSubmit(event) {
   event.preventDefault(); // 브라우저가 기본적으로 작동하는것을 막는다.
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   greeting.innerHTML = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 
